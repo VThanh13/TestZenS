@@ -19,7 +19,6 @@ minimaxsum(){
       if(max < array[i]){
         max =  array[i];
       }
-
     }
     String sumMin = (sum - max).toString();
     String sumMax = (sum - min).toString();
