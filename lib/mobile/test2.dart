@@ -7,7 +7,7 @@ class Test2 extends StatefulWidget{
 class _Test2 extends State<Test2>{
 
   List<String> listJoke =['A child asked his father, How were people born? So his father said,\n'
-  ' Adam and Eve made babies, then their babies became adults and made babies, and so on.\n'
+  'Adam and Eve made babies, then their babies became adults and made babies, and so on.\n'
   'The child then went to his mother, asked her the same question and she told him, We were monkeys then we evolved to become like we are now.\n'
   'The child ran back to his father and said, You lied to me!\n'
       'His father replied, No, your mom was talking about her side of the family.',
@@ -46,7 +46,7 @@ class _Test2 extends State<Test2>{
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 5, 5, 5),
-                  height: 60,
+                  height: 40,
                   decoration: BoxDecoration(color: Colors.white),
                   child: Row(
                     //mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -62,8 +62,8 @@ class _Test2 extends State<Test2>{
                         crossAxisAlignment: CrossAxisAlignment.end,
 
                         children: <Widget>[
-                          Text('Handicrafted by', style: TextStyle(color: Colors.grey, fontSize: 12),),
-                          Text('Jim HLS')
+                          Text('Handicrafted by', style: TextStyle(color: Colors.grey, fontSize: 10),),
+                          Text('Jim HLS', style: TextStyle(fontSize: 10, color: Colors.black),)
                         ],
                       ),
                       Container(
@@ -80,9 +80,9 @@ class _Test2 extends State<Test2>{
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
-                  height: 130,
+                  height: 120,
                   decoration: BoxDecoration(
-                      color: Colors.green
+                      color: Colors.green,
                   ),
 
                   child: Column(
@@ -93,7 +93,7 @@ class _Test2 extends State<Test2>{
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('A joke a day keeps the doctor away', style: TextStyle(color: Colors.white, fontSize: 20, ),),
+                          Text('A joke a day keeps the doctor away', style: TextStyle(color: Colors.white, fontSize: 18, ),),
 
                         ],
                       ),
@@ -101,7 +101,7 @@ class _Test2 extends State<Test2>{
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('If you joke wrong way, your teeth have to pay.(Serious)', style: TextStyle(color: Colors.white, fontSize: 13),)
+                          Text('If you joke wrong way, your teeth have to pay.(Serious)', style: TextStyle(color: Colors.white, fontSize: 11),)
                         ],
                       )
 
@@ -117,9 +117,9 @@ class _Test2 extends State<Test2>{
                       Container(
                         
 
-                        child: Text(listJoke[jokeNumber], overflow: TextOverflow.visible, style: TextStyle(fontSize: 14, color: Colors.black), textAlign: TextAlign.start,),
-                        height: 230,
-                        margin: EdgeInsets.fromLTRB(15 , 40, 15, 0),
+                        child: Text(listJoke[jokeNumber], overflow: TextOverflow.visible, style: TextStyle(fontSize: 13, color: Colors.black54), textAlign: TextAlign.start,),
+                        height: 250,
+                        margin: EdgeInsets.fromLTRB(15 , 60, 15, 0),
                       ),
 
                       Row(
@@ -128,13 +128,35 @@ class _Test2 extends State<Test2>{
                         children: <Widget>[
                           Padding(padding: EdgeInsets.fromLTRB(10, 5, 0, 5)),
                           ElevatedButton(onPressed: _nextJoke,
-                              child: Text('This is Funny!')),
-                          ElevatedButton(onPressed: _nextJoke,
-                              child: Text('This is not Funny.'),
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.green,
+                              child: Text('This is Funny!', style: TextStyle(color: Colors.white, fontSize: 11),),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  side: BorderSide(color: Colors.blue)
 
-                              )),
+                                )
+                              ),
+                                fixedSize: MaterialStateProperty.all<Size>(Size(120, 15))
+
+                            ),
+                          ),
+                          ElevatedButton(onPressed: _nextJoke,
+
+                              child: Text('This is not Funny.', style: TextStyle(color: Colors.white, fontSize: 11),),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  side: BorderSide(color: Colors.green)
+                                ),
+
+
+                              ),
+                              backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                              fixedSize: MaterialStateProperty.all<Size>(Size(120, 15))
+                            ),
+                            ),
                           Padding(padding: EdgeInsets.fromLTRB(0, 5, 10, 5))
 
                         ],
@@ -145,7 +167,7 @@ class _Test2 extends State<Test2>{
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                  margin: EdgeInsets.fromLTRB(5, 5, 5, 0),
+                  margin: EdgeInsets.fromLTRB(5, 30, 5, 0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
@@ -165,14 +187,14 @@ class _Test2 extends State<Test2>{
                                       'do not constitute any form of advice. HLS assumes no responsibility\n'
                                       'for the accuracy of any particular statement and accepts no liability\n'
                                       'for any loss or damage which may arise from reliance on the info-\n'
-                                      'mation contained on this site', overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12,color: Colors.grey), textAlign: TextAlign.center, ),
+                                      'mation contained on this site', overflow: TextOverflow.visible, style: TextStyle(fontSize: 10,color: Colors.grey), textAlign: TextAlign.center, ),
 
                                 )  ,
                               ) )
 
                         ],
                       ),
-                      Padding(padding: EdgeInsets.fromLTRB(0 , 0, 0, 10)),
+                      Padding(padding: EdgeInsets.fromLTRB(0 , 0, 0, 5)),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
